@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">NHL_Analyzer</string>
+    <string name="title_activity_navigation_drawer">NHL Analyzer</string>
+
+    <string-array name="sliding_drawer_array">
+        <item>NHL Analyzer</item>
+        <item>Advanced Stats</item>
+        <item>About Stats</item>
+        <item>Graphs/Charts</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

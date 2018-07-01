@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.wit.mobileapp.nhl_analyzer.HomeFragment"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/AdvancedStatsButton"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/darkGrey"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/AdvancedStatsText"
+                android:text="Advanced Stats"
+                android:layout_width="225dp"
+                android:layout_height="50dp"
+                android:background="@color/TransBack"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/AdvancedStatsButton"
+                app:layout_constraintTop_toTopOf="@+id/AdvancedStatsButton"/>
+
+            <ImageView
+                android:id="@+id/AboutStatsButton"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/AdvancedStatsButton"
+                android:background="@color/darkGrey"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/AboutStatsText"
+                android:text="About Stats"
+                android:layout_width="225dp"
+                android:layout_height="50dp"
+                android:background="@color/TransBack"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/AboutStatsButton"
+                app:layout_constraintTop_toTopOf="@+id/AboutStatsButton"/>
+
+            <ImageView
+                android:id="@+id/GraphsChartsButton"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/AboutStatsButton"
+                android:background="@color/darkGrey"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/GraphsChartsText"
+                android:text="Graphs/Charts"
+                android:layout_width="225dp"
+                android:layout_height="50dp"
+                android:background="@color/TransBack"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/GraphsChartsButton"
+                app:layout_constraintTop_toTopOf="@+id/GraphsChartsButton"/>
+
+            <ImageView
+                android:id="@+id/SettingsButton"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/GraphsChartsButton"
+                android:background="@color/darkGrey"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/SettingsText"
+                android:text="Settings"
+                android:layout_width="225dp"
+                android:layout_height="50dp"
+                android:background="@color/TransBack"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/SettingsButton"
+                app:layout_constraintTop_toTopOf="@+id/SettingsButton"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

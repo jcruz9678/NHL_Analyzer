@@ -2,5 +2,10 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#6a7eff</color>
+
+    <color name="colorDrawerBG">#FFFFFF</color>
+    <color name="TransBack">#be000000</color>
+    <color name="darkGrey">#2b2b2b</color>
+    <color name="black">#000000</color>
 </resources>
