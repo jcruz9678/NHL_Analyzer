@@ -5,9 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Picasso;
 
 public class HomeFragment extends Fragment
 {
+    ImageView ImageButton;
+    String DefaultImage = "https://i.imgur.com/a90HNxM.png";
 
     public HomeFragment()
     {
@@ -18,7 +23,29 @@ public class HomeFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.home_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.home_fragment, container, false);
+
+        //Set images
+        ImageButton = rootView.findViewById(R.id.AdvancedStatsButton);
+        loadImageFromUrl(DefaultImage);
+        ImageButton = rootView.findViewById(R.id.AboutStatsButton);
+        loadImageFromUrl(DefaultImage);
+        ImageButton = rootView.findViewById(R.id.GraphsChartsButton);
+        loadImageFromUrl(DefaultImage);
+        ImageButton = rootView.findViewById(R.id.SettingsButton);
+        loadImageFromUrl(DefaultImage);
+
+        return rootView;
+    }
+    private void loadImageFromUrl (String url)
+    {
+        Picasso.with(getContext()).load(url).into(ImageButton, new com.squareup.picasso.Callback()
+        {//                        ^.placeholder(R.mipmap.ic_project40logo) .error(R.mipmap.ic_project40logo)
+            @Override
+            public void onSuccess() { }
+            @Override
+            public void onError() { }
+        });
     }
 
 

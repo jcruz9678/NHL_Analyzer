@@ -103,4 +103,38 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //Opens fragments by buttons on home fragment
+    public void Open(View view)
+    {
+        int id = view.getId();
+        int position=0;
+
+        FragmentManager fm = getFragmentManager();
+        Fragment fragment = new HomeFragment();
+
+        if(id == R.id.AdvancedStatsButton)
+        {
+            position = 1;
+            fragment = new AdvancedStatsFragment();
+        }
+        else if(id == R.id.AboutStatsButton)
+        {
+            position = 2;
+            fragment = new AboutStatsFragment();
+        }
+        else if(id == R.id.GraphsChartsButton)
+        {
+            position = 3;
+            fragment = new GraphsChartsFragment();
+        }
+        else if(id == R.id.SettingsButton)
+        {
+            position = 4;
+            fragment = new SettingsFragment();
+        }
+        fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
+        setTitle(mDrawerOptionLabels[position]);
+        mDrawerListView.setItemChecked(position, true);
+    }
 }

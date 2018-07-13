@@ -1,16 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.wit.mobileapp.nhl_analyzer.AdvancedStatsFragment">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text"
+    <Spinner
+        android:id="@+id/StatDrop"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Advanced Stats Stats"/>
+        android:layout_height="50dp"
+        android:entries="@array/stat_array"
+        android:prompt="@string/prompt_stat" />
 
-</FrameLayout>
+    <Spinner
+        android:id="@+id/TeamDrop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Spinner
+        android:id="@+id/OtherDrop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+</LinearLayout>
+

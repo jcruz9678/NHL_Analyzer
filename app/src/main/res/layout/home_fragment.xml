@@ -19,15 +19,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/AdvancedStatsButton"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="Open"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/AdvancedStatsText"
@@ -43,15 +47,19 @@
                 app:layout_constraintStart_toStartOf="@+id/AdvancedStatsButton"
                 app:layout_constraintTop_toTopOf="@+id/AdvancedStatsButton"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/AboutStatsButton"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/AdvancedStatsButton"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="Open"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/AdvancedStatsButton" />
 
             <TextView
                 android:id="@+id/AboutStatsText"
@@ -67,15 +75,19 @@
                 app:layout_constraintStart_toStartOf="@+id/AboutStatsButton"
                 app:layout_constraintTop_toTopOf="@+id/AboutStatsButton"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/GraphsChartsButton"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/AboutStatsButton"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="Open"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/AboutStatsButton" />
 
             <TextView
                 android:id="@+id/GraphsChartsText"
@@ -91,15 +103,19 @@
                 app:layout_constraintStart_toStartOf="@+id/GraphsChartsButton"
                 app:layout_constraintTop_toTopOf="@+id/GraphsChartsButton"/>
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/SettingsButton"
-                android:layout_width="match_parent"
-                android:layout_height="125dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/GraphsChartsButton"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
-                app:srcCompat="@drawable/ic_launcher_background" />
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                android:onClick="Open"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/GraphsChartsButton" />
 
             <TextView
                 android:id="@+id/SettingsText"
