@@ -37,10 +37,10 @@ looplength = len(shot_thru_percentage)
 loopcount=0
 teamlen = 0
 #connecting to database
-user = "sql9249075"
-password = "Q6pTxIdvSs"
-host = "sql9.freemysqlhosting.net"
-database = "sql9249075"
+user = "b7b177ae59ac76"
+password = "558d3bc8"
+host = "us-cdbr-iron-east-04.cleardb.net"
+database = "heroku_8f0dc4064126e98"
 cnx = mysql.connector.connect(user=user, password=password, host=host, database=database)
 cursor = cnx.cursor()
 while loopcount < looplength:

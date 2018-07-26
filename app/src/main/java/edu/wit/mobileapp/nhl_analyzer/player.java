@@ -1,5 +1,7 @@
 package edu.wit.mobileapp.nhl_analyzer;
 
+import java.util.ArrayList;
+
 public class player {
     public String playername;
     public int age;

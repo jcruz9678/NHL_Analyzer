@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
@@ -136,5 +138,11 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
         setTitle(mDrawerOptionLabels[position]);
         mDrawerListView.setItemChecked(position, true);
+    }
+
+    public ArrayList initializeplayers(){
+        ArrayList playerlist = new ArrayList();
+
+        return playerlist;
     }
 }
