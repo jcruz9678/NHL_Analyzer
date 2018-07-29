@@ -37,24 +37,14 @@ looplength = len(shot_thru_percentage)
 loopcount=0
 teamlen = 0
 #connecting to database
-user = "root"
-password = "password"
-host = "localhost"
-database = "playerdb"
+user = "b7b177ae59ac76"
+password = "558d3bc8"
+host = "us-cdbr-iron-east-04.cleardb.net"
+database = "heroku_8f0dc4064126e98"
 cnx = mysql.connector.connect(user=user, password=password, host=host, database=database)
 cursor = cnx.cursor()
 while loopcount < looplength:
     teamloc = 0
-#    try:
-#        teamloc = teams_established.index(team[loopcount].getText())
-#    except:
-#        teams_established.append(team[loopcount].getText())
-#        teamlen = teamlen+1
-#        teamloc = teamlen
-#        teamvalue = (team[loopcount].getText(),)
-#        addteam = ("INSERT INTO teams " "(name) " "VALUES (%s)")
-#        cursor.execute(addteam, teamvalue)
-#        cnx.commit()
     thrupercent = shot_thru_percentage[loopcount].getText()
     if thrupercent == '':
         thrupercent ='0'
@@ -64,7 +54,6 @@ while loopcount < looplength:
     values = (name[loopcount].getText(), age[loopcount].getText(), team[loopcount].getText(), pos[loopcount].getText(), games_played[loopcount].getText(), corsi_for[loopcount].getText(), corsi_against[loopcount].getText(), corsi_pct[loopcount].getText(), corsi_rel_pct[loopcount].getText(), fenwik_for[loopcount].getText(), fenwik_against[loopcount].getText(), fenwik_pct[loopcount].getText(), fenwik_pct_rel[loopcount].getText(), on_ice_shot_pct[loopcount].getText(), on_ice_sv_pct[loopcount].getText(), pdo[loopcount].getText(), zs_offense_pct[loopcount].getText(), zs_defense_pct[loopcount].getText(), toi_pbp_per_60_all[loopcount].getText(), toi_pbp_per_60_ev[loopcount].getText(), takeaways[loopcount].getText(), giveaways[loopcount].getText(), expected_plsmns[loopcount].getText(), shotsattempt, thrupercent)
     addvalues = (
        "INSERT INTO players " "(name, age, team, pos, gp, CF, CA, CFpercent, CFpercentRel, FF, FA, FFpercent, FFpercentRel, oiSHpercent, oiSVpercent, PDO, oZSpercent, dZSpercent, TOI60, TOIEV, TK, GV, Eplusminus, Satt, Thrupercent) " "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)")
-    #print(addvalues, values)
     cursor.execute(addvalues, values)
     loopcount = loopcount+1
 cnx.commit()
