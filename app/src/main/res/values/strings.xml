@@ -92,11 +92,10 @@
         <item>Total shots attempted in all situations</item>
         <item>Percentage of shots taken that make it on net</item>
 
-
-
-
     </string-array>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="theme_switch">Dark Theme</string>
 </resources>

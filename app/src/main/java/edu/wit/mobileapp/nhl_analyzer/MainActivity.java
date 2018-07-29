@@ -1,12 +1,15 @@
 package edu.wit.mobileapp.nhl_analyzer;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.AppThemeDark);
+        }
+        else setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -136,5 +144,24 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
         setTitle(mDrawerOptionLabels[position]);
         mDrawerListView.setItemChecked(position, true);
+    }
+
+    public void ToggleTheme(boolean isChecked){
+        if (isChecked){
+            //this.getTheme().applyStyle(R.style.AppThemeDark, true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            restartApp();
+        }
+        else{
+            //this.getTheme().applyStyle(R.style.AppTheme, true);
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            restartApp();
+        }
+    }
+
+    public void restartApp(){
+        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }
