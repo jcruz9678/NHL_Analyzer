@@ -3,6 +3,7 @@ package edu.wit.mobileapp.nhl_analyzer;
 import java.util.ArrayList;
 
 public class player {
+    public int id;
     public String playername;
     public int age;
     public String team;
@@ -29,8 +30,9 @@ public class player {
     public int Satt;
     public double thrupercent;
 
-    public player(String pname, int page, String pteam, String ppos, int pgp, int pCF, int pCA, double pCFpercent, double pCFpercentRel, int pFF, int pFA, double pFFpercent, double pFFpercentRel, double poiSHpercent,
+    public player(int pid, String pname, int page, String pteam, String ppos, int pgp, int pCF, int pCA, double pCFpercent, double pCFpercentRel, int pFF, int pFA, double pFFpercent, double pFFpercentRel, double poiSHpercent,
     double poiSVpercent, double pPDO, double poZSpercent, double pdZSpercent, String pTOI60, String pTOIEV, int pTK, int pGV, double pEplusminus, int pSatt, double pthrupercent){
+        id = pid;
         playername = pname;
         age = page;
         team = pteam;
