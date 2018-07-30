@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -45,7 +44,7 @@ public class SplashPage extends AppCompatActivity
     private void loadImageFromUrl (String url)
     {
         Picasso.with(this).load(url).into(imageView, new com.squareup.picasso.Callback()
-        {//                        ^.placeholder(R.mipmap.ic_project40logo) .error(R.mipmap.ic_project40logo)
+        {//                        ^.placeholder() .error()
             @Override
             public void onSuccess()
             {

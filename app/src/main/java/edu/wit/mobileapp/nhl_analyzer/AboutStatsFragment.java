@@ -1,9 +1,6 @@
 package edu.wit.mobileapp.nhl_analyzer;
 
 import android.app.Fragment;
-import android.app.LauncherActivity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
