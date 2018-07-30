@@ -98,4 +98,5 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <string name="theme_switch">Dark Theme</string>
+    <string name="theme_text">Theme:</string>
 </resources>
