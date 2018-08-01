@@ -26,8 +26,8 @@
       <file leaf-file-name="scrapescriptsqliteversion.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scrapescriptsqliteversion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="692">
+              <caret line="55" column="210" selection-start-line="55" selection-start-column="210" selection-end-line="55" selection-end-column="210" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -192,8 +192,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapescriptsqliteversion.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="692">
+          <caret line="55" column="210" selection-start-line="55" selection-start-column="210" selection-end-line="55" selection-end-column="210" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>

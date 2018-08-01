@@ -59,19 +59,23 @@ public class AdvancedStatsFragment extends Fragment
                     JSONArray array = new JSONArray((response.body().string()));
                     int i = 0;
                     while (i < array.length()) {
-                        JSONObject object = array.getJSONObject(i);
-                        player newplayer = new player(object.getInt("idplayers"), object.getString("name"), object.getInt("age"), object.getString("team"), object.getString("pos"), object.getInt("gp"), object.getInt("CF"),
-                                object.getInt("CA"), object.getDouble("CFpercent"), object.getDouble("CFpercentRel"), object.getInt("FF"), object.getInt("FA"), object.getDouble("FFpercent"), object.getDouble("FFpercentRel"),
-                                object.getDouble("oiSHpercent"), object.getDouble("oiSVpercent"), object.getDouble("PDO"), object.getDouble("oZSpercent"), object.getDouble("dZSpercent"), object.getString("TOI60"), object.getString("TOIEV"), object.getInt("TK"),
-                                object.getInt("GV"), object.getDouble("Eplusminus"), object.getInt("Satt"), object.getDouble("Thrupercent"));
-                        playerlist.add(newplayer);
+                        try {
+                            JSONObject object = array.getJSONObject(i);
+                            player newplayer = new player(object.getInt("idplayers"), object.getString("name"), object.getInt("age"), object.getString("team"), object.getString("pos"), object.getInt("gp"), object.getInt("CF"),
+                                    object.getInt("CA"), object.getDouble("CFpercent"), object.getDouble("CFpercentRel"), object.getInt("FF"), object.getInt("FA"), object.getDouble("FFpercent"), object.getDouble("FFpercentRel"),
+                                    object.getDouble("oiSHpercent"), object.getDouble("oiSVpercent"), object.getDouble("PDO"), object.getDouble("oZSpercent"), object.getDouble("dZSpercent"), object.getString("TOI60"), object.getString("TOIEV"), object.getInt("TK"),
+                                    object.getInt("GV"), object.getDouble("Eplusminus"), object.getInt("Satt"), object.getDouble("Thrupercent"));
+                            playerlist.add(newplayer);
+                        }catch(JSONException e) {
+                            e.printStackTrace();
+                        }
                         i++;
 
                     }
 
                 } catch (IOException e) {
                     e.printStackTrace();
-                } catch (JSONException e) {
+                } catch(JSONException e) {
                     e.printStackTrace();
                 }
                 return null;
