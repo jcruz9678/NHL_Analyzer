@@ -1,16 +1,13 @@
 package edu.wit.mobileapp.nhl_analyzer;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.os.AsyncTask;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,19 +16,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import org.json.JSONObject;
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<player> playerlist;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerListView;
     private RelativeLayout mDrawerRelativeLayout;
@@ -66,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawerListView.setAdapter(drawerAdapter);
 
-        playerlist = new ArrayList<>();
-        initplayers();
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void
@@ -144,44 +128,6 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
         setTitle(mDrawerOptionLabels[position]);
         mDrawerListView.setItemChecked(position, true);
-    }
-
-    private void initplayers() {
-        //with help from http://androidbash.com/connecting-android-app-to-a-database-using-php-and-mysql/
-        AsyncTask<Void, Void, Void> asyncTask = new AsyncTask<Void, Void, Void>() {
-            String siteurl = "https://pure-badlands-77403.herokuapp.com/phpcodetry2.php";
-
-            @Override
-            protected Void doInBackground(Void... voids) {
-                OkHttpClient client = new OkHttpClient();
-                Request request = new Request.Builder().url(siteurl).build();
-                try {
-                    Response response = client.newCall(request).execute();
-                    JSONArray array = new JSONArray((response.body().string()));
-                    int i = 0;
-                    while (i < array.length()) {
-                        JSONObject object = array.getJSONObject(i);
-                        player newplayer = new player(object.getInt("idplayers"), object.getString("name"), object.getInt("age"), object.getString("team"), object.getString("pos"), object.getInt("gp"), object.getInt("CF"),
-                                object.getInt("CA"), object.getDouble("CFpercent"), object.getDouble("CFpercentRel"), object.getInt("FF"), object.getInt("FA"), object.getDouble("FFpercent"), object.getDouble("FFpercentRel"),
-                                object.getDouble("oiSHpercent"), object.getDouble("oiSVpercent"), object.getDouble("PDO"), object.getDouble("oZSpercent"), object.getDouble("dZSpercent"), object.getString("TOI60"), object.getString("TOIEV"), object.getInt("TK"),
-                                object.getInt("GV"), object.getDouble("Eplusminus"), object.getInt("Satt"), object.getDouble("Thrupercent"));
-                        MainActivity.this.playerlist.add(newplayer);
-                        i++;
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
-
-            @Override
-            protected void onPostExecute(Void aVoid) {
-                //code here can be used to notify the app that everything's been loaded, if needed
-            }
-        };
-        asyncTask.execute();
     }
 
     public void ToggleTheme(boolean isChecked) {
