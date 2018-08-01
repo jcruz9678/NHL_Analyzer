@@ -258,7 +258,7 @@ public class AdvancedStatsFragment extends Fragment
             TextView t1v = new TextView(getContext());
             int ID = playerlist.get(i).id;
             String IDString = Integer.toString(ID);
-            t1v.setText(IDString);
+            t1v.setText(IDString + " | ");
             tbrow.addView(t1v);
 
             TextView t2v = new TextView(getContext());
@@ -269,7 +269,7 @@ public class AdvancedStatsFragment extends Fragment
             TextView t3v = new TextView(getContext());
             int Age = playerlist.get(i).age;
             String AgeString = Integer.toString(Age);
-            t3v.setText(AgeString);
+            t3v.setText(AgeString + " | ");
             tbrow.addView(t3v);
 
             TextView t4v = new TextView(getContext());
@@ -291,19 +291,19 @@ public class AdvancedStatsFragment extends Fragment
             TextView t7v = new TextView(getContext());
             int CF = playerlist.get(i).CF;
             String CFString = Integer.toString(CF);
-            t7v.setText(CFString);
+            t7v.setText(CFString + " | ");
             tbrow.addView(t7v);
 
             TextView t8v = new TextView(getContext());
             int CA = playerlist.get(i).CA;
             String CAString = Integer.toString(CA);
-            t8v.setText(CAString);
+            t8v.setText(CAString + " | ");
             tbrow.addView(t8v);
 
             TextView t9v = new TextView(getContext());
             double CFPer = playerlist.get(i).CFpercent;
             String CFPerString = Double.toString(CFPer);
-            t9v.setText(CFPerString);
+            t9v.setText(CFPerString + " | ");
             tbrow.addView(t9v);
 
             TextView t10v = new TextView(getContext());
@@ -315,19 +315,19 @@ public class AdvancedStatsFragment extends Fragment
             TextView t11v = new TextView(getContext());
             int FF = playerlist.get(i).FF;
             String FFString = Integer.toString(FF);
-            t11v.setText(FFString);
+            t11v.setText(FFString + " | ");
             tbrow.addView(t11v);
 
             TextView t12v = new TextView(getContext());
             int FA = playerlist.get(i).FA;
             String FAString = Integer.toString(FA);
-            t12v.setText(FAString);
+            t12v.setText(FAString + " | ");
             tbrow.addView(t12v);
 
             TextView t13v = new TextView(getContext());
             double FFPer = playerlist.get(i).FFpercent;
             String FFPerString = Double.toString(FFPer);
-            t13v.setText(FFPerString);
+            t13v.setText(FFPerString + " | ");
             tbrow.addView(t13v);
 
             TextView t14v = new TextView(getContext());
