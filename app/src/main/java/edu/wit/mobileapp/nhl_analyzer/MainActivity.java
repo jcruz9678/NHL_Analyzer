@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         fragment = new AboutStatsFragment();
                         break;
+//                    case 3:
+//                        fragment = new GraphsChartsFragment();
+//                        break;
                     case 3:
-                        fragment = new GraphsChartsFragment();
-                        break;
-                    case 4:
                         fragment = new SettingsFragment();
                         break;
                 }
@@ -118,11 +118,13 @@ public class MainActivity extends AppCompatActivity {
         } else if (id == R.id.AboutStatsButton) {
             position = 2;
             fragment = new AboutStatsFragment();
-        } else if (id == R.id.GraphsChartsButton) {
+        }
+        //else if (id == R.id.GraphsChartsButton) {
+//            position = 3;
+//            fragment = new GraphsChartsFragment();
+//        }
+        else if (id == R.id.SettingsButton) {
             position = 3;
-            fragment = new GraphsChartsFragment();
-        } else if (id == R.id.SettingsButton) {
-            position = 4;
             fragment = new SettingsFragment();
         }
         fm.beginTransaction().replace(R.id.content_frame, fragment).commit();
