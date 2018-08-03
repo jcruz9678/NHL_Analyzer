@@ -99,4 +99,6 @@
 
     <string name="theme_switch">Dark Theme</string>
     <string name="theme_text">Theme:</string>
+    <string name="change_photo">Change Photo:</string>
+    <string name="browse_button_text">Browse</string>
 </resources>

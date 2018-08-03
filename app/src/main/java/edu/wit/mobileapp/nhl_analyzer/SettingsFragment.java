@@ -77,7 +77,7 @@ public class SettingsFragment extends Fragment
         Intent galleryIntent = new Intent();
         galleryIntent.setType("image/*");
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(Intent.createChooser(galleryIntent, "Select Picture"), PICK_IMAGE);
+        //startActivityForResult(Intent.createChooser(galleryIntent, "Select Picture"), PICK_IMAGE);
         Log.d("TAG", "Browser opened");
     }
 
@@ -85,7 +85,7 @@ public class SettingsFragment extends Fragment
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        View v = getView();
+        //View v = getView();
 
         if(requestCode == PICK_IMAGE ){
             Uri uri = data.getData();

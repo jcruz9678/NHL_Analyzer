@@ -12,6 +12,7 @@ import com.squareup.picasso.Picasso;
 public class HomeFragment extends Fragment
 {
     ImageView ImageButton;
+
     String DefaultImage = "https://i.imgur.com/a90HNxM.png";
 
     public HomeFragment()
@@ -22,21 +23,31 @@ public class HomeFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
+        boolean imagedefault = true;
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.home_fragment, container, false);
 
-        //Set images
-        ImageButton = rootView.findViewById(R.id.AdvancedStatsButton);
-        loadImageFromUrl(DefaultImage);
-        ImageButton = rootView.findViewById(R.id.AboutStatsButton);
-        loadImageFromUrl(DefaultImage);
-        ImageButton = rootView.findViewById(R.id.GraphsChartsButton);
-        loadImageFromUrl(DefaultImage);
-        ImageButton = rootView.findViewById(R.id.SettingsButton);
-        loadImageFromUrl(DefaultImage);
+        if(imagedefault = true){
+            //Set default image
+            ImageButton = rootView.findViewById(R.id.AdvancedStatsButton);
+            loadImageFromUrl(DefaultImage);
+            ImageButton = rootView.findViewById(R.id.AboutStatsButton);
+            loadImageFromUrl(DefaultImage);
+            ImageButton = rootView.findViewById(R.id.GraphsChartsButton);
+            loadImageFromUrl(DefaultImage);
+            ImageButton = rootView.findViewById(R.id.SettingsButton);
+            loadImageFromUrl(DefaultImage);
+        }
+        else{
+            //load chosen image
+
+
+        }
 
         return rootView;
     }
+
+    //TODO: Fix photo button
     private void loadImageFromUrl (String url)
     {
         Picasso.with(getContext()).load(url).into(ImageButton, new com.squareup.picasso.Callback()
