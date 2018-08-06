@@ -13,36 +13,45 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_marginTop="60dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:text="@string/theme_text"
-            android:textSize="24sp"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <Switch
             android:id="@+id/themeSwitch"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:text="@string/theme_switch" />
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:layout_gravity="right"
+            android:switchMinWidth="50dp"
+            android:text="@string/theme_switch"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="40dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:text="@string/change_photo"
-            android:textSize="24sp"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/browse_button"
-            android:layout_gravity="right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:text="@string/browse_button_text"
-            android:textSize="12sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 </FrameLayout>
