@@ -5,8 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.wit.mobileapp.nhl_analyzer.HomeFragment"
-    android:background="@color/black">
+    tools:context="edu.wit.mobileapp.nhl_analyzer.HomeFragment">
+
+    <ImageView
+        android:id="@+id/BackImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +37,7 @@
                 android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
                 android:onClick="Open"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +65,7 @@
                 android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
                 android:onClick="Open"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +121,7 @@
                 android:adjustViewBounds="false"
                 android:background="@color/darkGrey"
                 android:onClick="Open"
-                android:scaleType="fitCenter"
+                android:scaleType="fitXY"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -134,9 +144,6 @@
         </android.support.constraint.ConstraintLayout>
 
     </ScrollView>
-
-
-
 
 
 </android.support.constraint.ConstraintLayout>

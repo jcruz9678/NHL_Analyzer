@@ -12,7 +12,8 @@ import com.squareup.picasso.Picasso;
 public class SplashPage extends AppCompatActivity
 {
     private static int SPLASH_TIME_OUT = 2000; //Time in seconds to wait
-    ImageView imageView; String LogoUrl = "https://i.imgur.com/mqP8nGF.jpg";
+    ImageView imageView;
+    String LogoUrl = "https://i.imgur.com/mqP8nGF.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

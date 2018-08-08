@@ -27,6 +27,15 @@ public class HomeFragment extends Fragment
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.home_fragment, container, false);
 
+        ImageView ImageSettings = (ImageView) rootView.findViewById(R.id.SettingsButton);
+        ImageSettings.setImageResource(R.drawable.ice_puck);
+        ImageView ImageAdv = (ImageView) rootView.findViewById(R.id.AdvancedStatsButton);
+        ImageAdv.setImageResource(R.drawable.numbers);
+        ImageView ImageAbo = (ImageView) rootView.findViewById(R.id.AboutStatsButton);
+        ImageAbo.setImageResource(R.drawable.question);
+
+/*
+
         if(imagedefault = true){
             //Set default image
             ImageButton = rootView.findViewById(R.id.AdvancedStatsButton);
@@ -43,6 +52,8 @@ public class HomeFragment extends Fragment
 
 
         }
+
+*/
 
         return rootView;
     }

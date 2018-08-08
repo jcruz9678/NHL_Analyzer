@@ -39,11 +39,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:paddingStart="10dp"
             android:text="@string/change_photo"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/browse_button"
@@ -51,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="@string/browse_button_text"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="invisible" />
     </LinearLayout>
 
 </FrameLayout>
